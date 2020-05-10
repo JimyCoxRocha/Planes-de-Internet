@@ -1,0 +1,574 @@
+:root{
+    --colorPrincipal: #f9ae17;
+    --fuenteHeader: 'Convergence', sans-serif;
+    --funtePrincipal: 'Lato', sans-serif;
+    
+}
+/******/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--funtePrincipal);
+    min-height: 100vh;
+    min-width: 41.5rem;
+}
+/******/
+h1{
+    font-size: 4rem;
+    margin: 0;
+    font-family: var(--fuenteHeader);
+    font-weight: 300;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2.5rem;
+    margin: 0rem;
+}
+p{
+    margin: 0rem;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+img{
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+/**Utilidades**/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.mayuscula{
+    text-transform: uppercase;
+}
+.centrar-txt{
+    text-align: center;
+}
+.clearfix{
+    overflow: hidden;
+}
+.boton{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: var(--fuenteHeader);
+}
+.boton-siguiente{
+    background-color: rgba(218, 41,28, .9);
+    color: white;
+}
+.boton-siguiente:hover{
+    background-color: rgba(230, 24, 9, 0.9);
+    transition: background-color 1s ease;
+}
+
+.boton-cancelar{
+    background-color: #d1d1d1;
+    color: white;
+}
+.boton-cancelar:hover{
+    background-color: #6b6b6b;
+    transition: background-color 1s ease;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-bold{
+    font-weight: bold;
+}
+/**** Header ****/
+.site-header{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+@media (max-height: 2347px) {
+    .site-header{
+        height: 60.6rem;
+    }
+}
+.site-header::before{
+    position: absolute;
+    content: "";
+    top: 14rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/Header-Internet.png");
+    background-repeat: no-repeat;
+    background-position: right top; 
+    background-size: cover;
+}
+.barra-encabezado{
+    background-color: #ffdd0085;
+    width: 100%;
+    height: 14rem;
+    border-bottom:5px solid #ffdd002c;
+}
+
+.contenido-barra{
+    position: relative;
+    height: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.contenido-barra img{
+    max-height: 13rem;
+}
+.contenido-barra ul{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    background-color: #f9ae17d0;
+    margin: 0rem;
+    font-size: 4rem;
+}
+.contenido-barra ul li:first-child{
+    font-size: 5rem;
+}
+.contenido-barra ul li:last-child{
+    font-size: 3.5rem;
+}
+.contenido-barra li i{
+    font-size: 5rem;
+    color: white;
+}
+.informacion{
+    padding: 2rem;
+    line-height: 10rem;
+    font-family: var(--funtePrincipal);
+}
+@media (max-width: 1185px) {
+    .contenido-barra ul{
+        font-size: 4rem;
+        right: 4rem;
+    }
+    .contenido-barra ul li:first-child{
+        font-size: 4.5rem;
+    }
+    .contenido-barra ul li:last-child{
+        font-size: 3rem;
+    }
+    .contenido-barra li i{
+        font-size: 4rem;
+        color: white;
+    }
+    .contenido-barra img{
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .contenido-barra li i{
+        font-size: 3rem;
+        color: white;
+    }
+    .contenido-barra ul li{
+        font-size: 3rem!important;
+    }
+    .contenido-barra ul li:last-child{
+        font-size: 2rem!important;
+    }
+    .contenido-barra ul{
+        padding: 2rem;
+    }
+    .informacion{
+        line-height: 7rem;
+    }
+}
+@media (max-width: 810px) {
+    .contenido-barra ul{
+        top: 20rem;
+        left: 0;
+        background-color: unset;
+        min-width: 31.23rem;
+        padding: 0rem;
+    }
+    .contenido-barra ul li{
+        background-color: var(--colorPrincipal);
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .informacion li i{
+        font-size: 3rem;
+        margin-left: 4rem;
+    }
+    .informacion{
+        width: 90%;
+    }
+}
+/****Header-Planes*****/
+.planes{
+    width: 49rem;
+    margin: 7rem auto 4rem auto;
+}
+.planes h2{
+    float: left;
+    margin: 2rem 2rem;
+    font-weight: 900;
+}
+.planes img{
+    width: 5rem;
+    color:  var(--colorPrincipal);
+    float: left;
+    color: var(--colorPrincipal);
+    margin: 1rem 0rem;
+}
+/** Planes de Televisión **/
+.empresa_Claro,
+.empresa_TVCable{
+    width: 49%;
+    height: 100%;
+    float: left;
+}
+.empresa_Claro img,
+.empresa_TVCable img{
+    width: 20rem;
+    height: 7rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+.empresa_Claro{
+    margin-right: 1%;
+    background-color: rgba(218, 41,28, .9);
+}
+.empresa_TVCable{
+    margin-left: 1%;
+    background-color: rgba(29, 60, 122,.8);
+}
+
+/******PLANES******/
+.plan{
+    padding: 1rem;
+    margin: 0 7rem;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+}
+.plan:last-child{
+    margin-bottom: 7rem;
+}
+.plan p{
+    font-size: 1.5rem;
+    text-align: right;
+    margin: 0 6rem;
+    color: #d1d1d1;
+}
+
+@media (max-width: 1185px) {
+    .empresa_Claro,
+    .empresa_TVCable{
+        float: unset;
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: 1rem;
+    }
+    .empresa_Claro{
+        margin-bottom: 5rem;
+    }
+    .plan{
+        padding: 1rem;
+        margin: 4rem;
+    }
+}
+@media (max-width: 700px) {
+    .empresa_Claro,
+    .empresa_TVCable{
+        width: 90%;
+    }
+    .plan{
+        margin: 3rem;
+    }
+    .plan h3{
+        font-size: 2rem;
+    }
+    .detalle ul li{
+        font-size: 1.9rem;
+    }
+    .planes{
+        width: 35rem;
+        margin: 7rem auto 4rem auto;
+    }
+    .planes h2{
+        font-size: 2.5rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    .planes img{
+        width: 3rem;
+        margin: 2rem auto;
+    }
+
+}
+/*******FOOTER******/
+.site-footer{
+    background-color: var(--colorPrincipal);
+    height: auto;
+    width: 100%;
+    margin-top: 10rem;
+}
+.site-footer img, 
+.site-footer ul{
+    height: 12rem;
+    margin: 1rem;
+    float: left;
+}
+.site-footer ul{
+    float: right;
+    height: 100%;
+}
+
+.site-footer ul li{
+    float: left;
+    margin-right: 5rem;
+    font-size: 2.5rem;
+}
+.site-footer ul li:last-child{
+    margin-right: 0rem;
+}
+.site-footer i{
+    color: white;
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+@media (max-width: 1185px) {
+    .site-footer img{
+        margin-left: 4rem;
+    }
+    .site-footer ul{
+        margin-right: 4rem;
+    }
+    .site-footer ul li{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 1074px) {
+    .site-footer ul li:last-child{
+        float: unset;
+        text-align: left;
+    }
+    .site-footer ul li br{
+        display: none;
+    }
+    .site-footer i{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 915px) {
+    .site-footer ul li{
+        float: unset;
+    }
+    .site-footer ul li:last-child{
+        margin-right: 5rem;
+    }
+    .site-footer img{
+       margin-top: 2.9rem;
+    }
+}
+@media (max-width: 798px) {
+    .site-footer ul,
+    .site-footer img{
+        float: unset;
+        
+    }
+    .site-footer ul{
+        margin: 0rem;
+    }
+    .site-footer ul li:last-child{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .site-footer img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 7rem;
+    }
+}
+/****DETALLES****/
+.detalle{
+    display: none;
+}
+.detalle ul{
+    text-align: left;
+    margin:2rem 1rem 1rem 1rem;
+    background-color: #d1d1d1;
+    padding: 2rem;
+}
+.detalle li{
+    font-size: 2rem;
+}
+
+
+/****Form****/
+form{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+form input[type="text"],
+form input[type="number"],
+form input[type="email"]{
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    padding-left: 2rem;
+}
+.info-compra{
+    margin-top: 10rem;
+    position: relative;
+}
+.informacion-plan{
+    width: 50%;
+    height: 34.2rem;
+    margin-top: 2rem;
+    display: flex!important;
+    align-items: center;
+}
+.plan-seleccion{
+    margin: 0 2rem;
+    width: 100%;
+}
+.plan-seleccion ul{
+    margin: 0 2rem;
+    width: 100%;
+    padding: 5rem!important;
+}
+form{
+    float: left;
+    width: 50%;
+}
+label{
+    display: block;
+    width: 100%;
+}
+input[type="submit"]{
+    border: 0;
+    margin-left: 15rem;
+    float: right;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+input[type="submit"], form a{
+    margin-top: 3rem;
+    padding: 2rem 3rem!important;
+    border-radius: 5%;
+}
+/*****Medias Query*********/
+@media (max-width: 1185px) {
+    .contenedor h1{
+        text-align: center;
+    }
+    form,
+    .informacion-plan{
+        float:unset;
+        min-width: 30rem;
+        margin: 1rem auto;
+        width: 90%;
+    }
+    form input[type="submit"]{
+        margin-left: 0rem;
+    }
+    .plan-seleccion ul{
+        margin: 0;
+    }
+    .plan-seleccion{
+        margin: 0rem;
+    }
+}
+/*****Valdiaciones*********/
+.error{
+    font-size: 1.5rem;
+    color: red;
+}
+/********Agradecimientos********/
+#mostrar-resultado > div{
+    border-bottom: 1px solid #d1d1d1;
+    padding: 2rem;
+    
+}
+#mostrar-resultado h2{
+    margin: 0;
+    font-size: 4rem;
+}
+#mostrar-resultado a{
+    float: right;
+    padding: 2rem 3rem;
+}
+#mostrar-resultado p{
+    font-size: 1.5rem;
+}
+.resultado-precio{
+    margin-bottom: 2rem;
+    border: 1px solid #d1d1d1;
+}
+.resultado-agradecimiento h2{
+    display: inline-block;
+}
+.resultado-agradecimiento i{
+    float: right;
+    font-size: 8rem;
+    margin:0rem 3rem; 
+    color: var(--colorPrincipal);
+}
+.resultado-informacion ul{
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.resultado-precio h3{
+    display: inline-block;
+}
+.resultado-precio span{
+    float: right;
+    font-size: 2.5rem;
+}
+.resultado-plan ul{
+    background-color: #f5f5f5;
+    border: 1px solid #d1d1d1;
+    border-style: dashed;
+    border-radius: 1%;
+}
+.resultado-plan .informacion-plan{
+    margin: 0rem!important;
+}
+
+/***********MEDIA QUERY***********/
+@media (max-width: 1074px) {
+    .resultado-agradecimiento h2{
+        display: block;
+        text-align: center;
+    }
+    .resultado-agradecimiento i{
+        float: unset;
+        font-size: 4rem;
+        margin-top: 7rem;
+        margin-left: 0rem;
+    }
+    #mostrar-resultado .informacion-plan{
+        width: 100%;
+    }
+    .resultado-precio,
+    #mostrar-resultado > div{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #mostrar-resultado a{
+        margin-right: 2rem;
+        margin-top: 2rem
+    }
+}
