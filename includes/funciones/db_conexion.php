@@ -1,6 +1,6 @@
 <?php 
 
-    $con= new mysqli("localhost", "root", "", "planes");
+    $con= new mysqli("bc9tosws1s0ehznlfqnv-mysql.services.clever-cloud.com", "ummldvadaqjvkb5a", "XVuPL4PfnfxN3VwnVwrS", "bc9tosws1s0ehznlfqnv");
 
     if($con->connect_errno){
         die ("Error en la conexión: ".$con->connect_errno." ".$con->connect_error);
