@@ -262,45 +262,35 @@ ul{
     color: #d1d1d1;
 }
 
+
 @media (max-width: 1185px) {
     .empresa_Claro,
     .empresa_TVCable{
         float: unset;
         margin: 0 auto;
-        width: 80%;
+        width: 90%;
         padding-bottom: 1rem;
+        max-width: 57.3rem;
     }
     .empresa_Claro img,
     .empresa_TVCable img{
-        width: 40rem;
-        height: 15rem;
+        width: 30rem;
+        height: 10rem;
         margin-bottom: 0rem;
     }
     .empresa_Claro{
         margin-bottom: 5rem;
     }
     .plan{
-        padding: 3rem;
+        padding: 2rem;
         margin: 4rem;
-    }
-    .plan h3{
-        font-size: 4rem;
     }
     .plan p{
         display: none;
     }
 }
 @media (max-width: 700px) {
-    .empresa_Claro,
-    .empresa_TVCable{
-        width: 90%;
-    }
 
-    .empresa_Claro img,
-    .empresa_TVCable img{
-        width: 25rem;
-        height: 10rem;
-    }
     .planes{
         width: 35rem;
         margin: 7rem auto 4rem auto;
@@ -310,20 +300,9 @@ ul{
         margin-left: 0rem;
         margin-right: 0rem;
     }
-    .plan h3{
-        font-size: 3.5rem;
-    }
     .planes img{
         width: 3rem;
         margin: 2rem auto;
-    }
-}
-@media (max-width: 609px) {
-    .plan{
-        padding-left: .1rem;
-        padding-right: .1rem;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 /*******FOOTER******/
@@ -424,21 +403,20 @@ ul{
 }
 @media (max-width: 1185px) {
     .detalle li{
-        font-size: 3rem;
-        line-height: 4rem;
-    }
-    .detalle h3{
-        font-size: 4rem!important;
-    }
-    #mostrar-resultado .boton,
-    .detalle .boton{
-        padding: 2rem 3rem;
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
-@media (max-width: 986px) {
+@media (max-width: 709px) {
+
     .detalle li{
-        font-size: 3.2rem;
+        font-size: 1.7rem;
+    }
+    .detalle ul{
+        margin: 0;
+        padding: 3rem!important;
+    }
+    .plan{
+        padding: 1rem;
     }
 }
 
@@ -474,7 +452,7 @@ form input[type="tel"]{
 .plan-seleccion ul{
     margin: 0 2rem;
     width: 100%;
-    padding: 5rem!important;
+    padding: 5rem;
 }
 form{
     float: left;
@@ -500,7 +478,7 @@ input[type="submit"], form a{
 /*****Medias Query*********/
 @media (max-width: 1185px) {
     .contenedor h1{
-        font-size: 6rem;
+        font-size: 5rem;
         text-align: center;
     }
     form,
@@ -525,12 +503,8 @@ input[type="submit"], form a{
     form input[type="number"],
     form input[type="email"],
     form input[type="tel"]{
-        font-size: 4rem;
-        height: 7rem;
-    }
-    form,
-    form .boton{
         font-size: 2.4rem;
+        height: 5rem;
     }
     input::placeholder {
         font-size: 3rem;
