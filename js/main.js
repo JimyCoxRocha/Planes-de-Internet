@@ -32,7 +32,7 @@ $(function(){
     function soloLetras(e){
         key=e.keyCode || e.which;
         letra= String.fromCharCode(key).toLowerCase();
-        letras= " abcdefghijklmnñopqrstuvwxyz";
+        letras= " abcdefghijklmnñopqrstuvwxyzáéíóú";
         especiales= "8-37-38-46-164";
         teclado_especial= false;
         
@@ -47,6 +47,8 @@ $(function(){
         }
     }
 $(function(){
+    let contador=0;
+
     //Escogiendo elementos del DOM Formulario
     let formulario = $("form input");
 
@@ -61,6 +63,7 @@ $(function(){
             }
             e.preventDefault();
         }else{
+            contador++;
             if($($("#nombre p")).length>0){
                 $($("#nombre p")).remove();
             }
@@ -76,6 +79,7 @@ $(function(){
             }
             e.preventDefault();
         }else{
+            contador++;
             if($($("#correo p")).length>0){
                 $($("#correo p")).remove();
             } 
@@ -91,29 +95,30 @@ $(function(){
             }
             e.preventDefault();
         }else{
+            contador++;
             if($($("#telefono p")).length>0){
                 $($("#telefono p")).remove();
             } 
         }
     }
 
-
     $(formulario.get(3)).off('click').on('click',function(e){
+        contador=0;
         validarNombre(e);
         validarCorreo(e);
         validarTelefono(e);
         
-
     });
-});
 
-$(function(){
     $("#solicitar").show();
     $("#mostrar-resultado").hide();
 
+    
     $("form #submit").click(function(){
-        $("#solicitar").hide();
-        $("#mostrar-resultado").show();
+        if(contador==3){
+            $("#solicitar").hide();
+            $("#mostrar-resultado").show();
+        } 
     });
-
+    
 });
