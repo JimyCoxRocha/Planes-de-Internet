@@ -32,10 +32,10 @@
     }
     }();
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('nb8gb4br9a3g');
+    drift.load('he4pkxeif5nf');
     </script>
     <!-- End of Async Drift Code -->
-    
+
 </head>
 <body>
 
@@ -44,9 +44,9 @@
                 <div class="contenido-barra">
                     <a href="index.php" target="_self" id="referencia"><img src="img/Logo.png" alt="Planes de Internet y Televisión" id="logo"></a>
                     <ul class="informacion centrar-txt">
-                        <li><i class="fas fa-user"></i> Jimy Cox Soriano</li>
+                        <li><i class="fas fa-user"></i> Andrés Cox Rocha</li>
                         <li><i class="fab fa-whatsapp"></i> 0958657843</li>
-                        <li><i class="fas fa-envelope"></i> j-alfredocox@hotmail.com</li>
+                        <li><i class="fas fa-envelope"></i> jandrescox@hotmail.com</li>
                     </ul>
                 </div>
             </div>
