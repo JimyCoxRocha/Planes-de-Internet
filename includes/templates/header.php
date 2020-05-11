@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <script src="https://kit.fontawesome.com/631ea847d3.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
