@@ -172,26 +172,7 @@ ul{
         margin-left: 3rem;
     }
 }
-
-@media (max-width: 968px) {
-    .contenido-barra li i{
-        font-size: 3rem;
-        color: white;
-    }
-    .contenido-barra ul li{
-        font-size: 3rem!important;
-    }
-    .contenido-barra ul li:last-child{
-        font-size: 2rem!important;
-    }
-    .contenido-barra ul{
-        padding: 2rem;
-    }
-    .informacion{
-        line-height: 7rem;
-    }
-}
-@media (max-width: 810px) {
+@media (max-width: 900px) {
     .contenido-barra ul{
         top: 20rem;
         left: 0;
@@ -200,16 +181,27 @@ ul{
         padding: 0rem;
     }
     .contenido-barra ul li{
-        background-color: var(--colorPrincipal);
+        background-color: #f9ae17d0;
         margin-bottom: 1rem;
         text-align: left;
     }
     .informacion li i{
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 4rem;
     }
     .informacion{
         width: 90%;
+    }
+    .informacion{
+        line-height: 7rem;
+    }
+}
+@media (max-width: 510px) {
+    .contenido-barra ul li{
+        font-size: 3.5rem!important;
+    }
+    .contenido-barra ul li:last-child{
+        font-size: 2.5rem!important;
     }
 }
 /****Header-Planes*****/
@@ -275,15 +267,27 @@ ul{
     .empresa_TVCable{
         float: unset;
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         padding-bottom: 1rem;
+    }
+    .empresa_Claro img,
+    .empresa_TVCable img{
+        width: 40rem;
+        height: 15rem;
+        margin-bottom: 0rem;
     }
     .empresa_Claro{
         margin-bottom: 5rem;
     }
     .plan{
-        padding: 1rem;
+        padding: 3rem;
         margin: 4rem;
+    }
+    .plan h3{
+        font-size: 4rem;
+    }
+    .plan p{
+        display: none;
     }
 }
 @media (max-width: 700px) {
@@ -291,14 +295,11 @@ ul{
     .empresa_TVCable{
         width: 90%;
     }
-    .plan{
-        margin: 3rem;
-    }
-    .plan h3{
-        font-size: 2rem;
-    }
-    .detalle ul li{
-        font-size: 1.9rem;
+
+    .empresa_Claro img,
+    .empresa_TVCable img{
+        width: 25rem;
+        height: 10rem;
     }
     .planes{
         width: 35rem;
@@ -309,11 +310,21 @@ ul{
         margin-left: 0rem;
         margin-right: 0rem;
     }
+    .plan h3{
+        font-size: 3.5rem;
+    }
     .planes img{
         width: 3rem;
         margin: 2rem auto;
     }
-
+}
+@media (max-width: 609px) {
+    .plan{
+        padding-left: .1rem;
+        padding-right: .1rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 /*******FOOTER******/
 .site-footer{
@@ -368,21 +379,15 @@ ul{
     .site-footer i{
         font-size: 3.5rem;
     }
-}
-@media (max-width: 915px) {
     .site-footer ul li{
-        float: unset;
-    }
-    .site-footer ul li:last-child{
-        margin-right: 5rem;
-    }
-    .site-footer img{
-       margin-top: 2.9rem;
+        font-size: 2.5rem;
     }
 }
-@media (max-width: 798px) {
+
+@media (max-width: 986px) {
     .site-footer ul,
-    .site-footer img{
+    .site-footer img,
+    .site-footer ul li{
         float: unset;
         
     }
@@ -397,7 +402,10 @@ ul{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        height: 7rem;
+        height: 10rem;
+    }
+    .site-footer ul li{
+        font-size: 2.9rem;
     }
 }
 /****DETALLES****/
@@ -407,13 +415,32 @@ ul{
 .detalle ul{
     text-align: left;
     margin:2rem 1rem 1rem 1rem;
-    background-color: #d1d1d1;
+    background-color: #d1d1d136;
     padding: 2rem;
 }
 .detalle li{
     font-size: 2rem;
+    line-height: 3rem;
 }
-
+@media (max-width: 1185px) {
+    .detalle li{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .detalle h3{
+        font-size: 3rem!important;
+    }
+    #mostrar-resultado .boton,
+    .detalle .boton{
+        padding: 2rem 3rem;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 901px) {
+    .detalle li{
+        font-size: 2.8rem;
+    }
+}
 
 /****Form****/
 form{
@@ -472,6 +499,7 @@ input[type="submit"], form a{
 /*****Medias Query*********/
 @media (max-width: 1185px) {
     .contenedor h1{
+        font-size: 4.5rem;
         text-align: center;
     }
     form,
@@ -480,15 +508,27 @@ input[type="submit"], form a{
         min-width: 30rem;
         margin: 1rem auto;
         width: 90%;
+        height: 100%;
     }
     form input[type="submit"]{
         margin-left: 0rem;
     }
     .plan-seleccion ul{
         margin: 0;
+        font-size: 3rem;
     }
     .plan-seleccion{
-        margin: 0rem;
+        margin: 2rem 0 0 0;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="email"]{
+        font-size: 3rem;
+        height: 5rem;
+    }
+    form,
+    form .boton{
+        font-size: 2rem;
     }
 }
 /*****Valdiaciones*********/
@@ -552,6 +592,7 @@ input[type="submit"], form a{
     .resultado-agradecimiento h2{
         display: block;
         text-align: center;
+        font-size: 5rem!important;
     }
     .resultado-agradecimiento i{
         float: unset;
@@ -568,7 +609,16 @@ input[type="submit"], form a{
         margin: 0 auto;
     }
     #mostrar-resultado a{
-        margin-right: 2rem;
+        margin-right: 4rem;
         margin-top: 2rem
+    }
+    .resultado-precio h3,
+    .resultado-precio span{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 625px) {
+    .resultado-agradecimiento h2{
+        font-size: 4rem;
     }
 }
