@@ -25,7 +25,7 @@
             <label id="nombre">*Nombre completo<input type="text" placeholder="Nombre y Apellido" name="nombre" id="nombre" onkeypress="return soloLetras(event)" required></label><br>
             <?php if(isset($_POST["submit"])){ validarNombre($nombre, $confirmarEnvio);}?>
             
-            <label id="telefono">*Teléfeno celular<input type="text" placeholder="Teléfeno" name="telefono" id="telefono" pattern="[0-9]{10}" required></label><br><!--Patter nos permite modelar un formato que recibiremos Pattern = modelo-->
+            <label id="telefono">*Teléfeno celular<input type="tel" placeholder="Teléfeno" name="telefono" id="telefono" pattern="[0-9]{10}" required></label><br><!--Patter nos permite modelar un formato que recibiremos Pattern = modelo-->
             <?php if(isset($_POST["submit"])){ validarTel($telefono, $confirmarEnvio);}?>
             
             <label id="correo">*Correo electrónico<input type="email" placeholder="Correo electrónico" name="correo" id="correo" required></label>
