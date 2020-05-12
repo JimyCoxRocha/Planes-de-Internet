@@ -66,12 +66,10 @@ $(function(){
                 $(formulario[0]).after('<p class="error">* Debe ingresar un nombre y un apellido.</p>');
                 e.preventDefault();
             }
-            alert("1");
         }else{
             contador++;
             if($($("#nombre p")).length>0){
                 $($("#nombre p")).remove();
-                alert("2");
             }
         } 
     }
@@ -84,12 +82,10 @@ $(function(){
                 $(formulario[2]).after('<p class="error">* Correo no válido.</p>');
                 e.preventDefault();
             }
-            alert("1");
         }else{
             contador++;
             if($($("#correo p")).length>0){
                 $($("#correo p")).remove();
-                alert("2");
             } 
         }
     }
@@ -100,15 +96,12 @@ $(function(){
         if(nuevoTexto=="" || nuevoTexto.slice(0,2)!="09" || nuevoTexto.length!=10){
             if($($("#telefono p")).length==0){
                 $(formulario[1]).after('<p class="error">* Ingrese correctametne su teléfono celular.</p>');
-                alert("Entremos");
                 e.preventDefault();
             }
-            alert("1");
         }else{
             contador++;
             if($($("#telefono p")).length>0){
                 $($("#telefono p")).remove();
-                alert("2");
             } 
         }
     }
