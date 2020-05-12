@@ -47,7 +47,11 @@ $(function(){
         }
     }
 $(function(){
-    let contador=0;
+
+    $("#solicitar").show();
+    $("#mostrar-resultado").hide();
+
+    var contador=0;
 
     //Escogiendo elementos del DOM Formulario
     let formulario = $("form input");
@@ -60,12 +64,14 @@ $(function(){
         if(nuevoTexto=="" || nuevoTexto.indexOf(" ")==-1){
             if($($("#nombre p")).length==0){
                 $(formulario[0]).after('<p class="error">* Debe ingresar un nombre y un apellido.</p>');
+                e.preventDefault();
             }
-            e.preventDefault();
+            alert("1");
         }else{
             contador++;
             if($($("#nombre p")).length>0){
                 $($("#nombre p")).remove();
+                alert("2");
             }
         } 
     }
@@ -76,12 +82,14 @@ $(function(){
         if(nuevoTexto=="" || (nuevoTexto.indexOf(".com")==-1 || nuevoTexto.indexOf("@")==-1)){
             if($($("#correo p")).length==0){
                 $(formulario[2]).after('<p class="error">* Correo no válido.</p>');
+                e.preventDefault();
             }
-            e.preventDefault();
+            alert("1");
         }else{
             contador++;
             if($($("#correo p")).length>0){
                 $($("#correo p")).remove();
+                alert("2");
             } 
         }
     }
@@ -92,12 +100,15 @@ $(function(){
         if(nuevoTexto=="" || nuevoTexto.slice(0,2)!="09" || nuevoTexto.length!=10){
             if($($("#telefono p")).length==0){
                 $(formulario[1]).after('<p class="error">* Ingrese correctametne su teléfono celular.</p>');
+                alert("Entremos");
+                e.preventDefault();
             }
-            e.preventDefault();
+            alert("1");
         }else{
             contador++;
             if($($("#telefono p")).length>0){
                 $($("#telefono p")).remove();
+                alert("2");
             } 
         }
     }
@@ -108,17 +119,36 @@ $(function(){
         validarCorreo(e);
         validarTelefono(e);
         
+        if($("#envioConfirmado")){
+            $.ajax({
+                url: "datos.php",
+                type: "POST",
+                data: $("#formulario").serialize(),
+                success: function(res){
+                    $(".resultado-informacion").html(res);
+                }
+
+            });
+            
+
+            if(contador==3){
+                $("#solicitar").hide();
+                $("#mostrar-resultado").show();
+            }
+        }
+        $("#envioConfirmado").remove();
     });
 
-    $("#solicitar").show();
-    $("#mostrar-resultado").hide();
+
 
     
-    $("form #submit").click(function(){
+    /*$("form #submit").click(function(){
         if(contador==3){
             $("#solicitar").hide();
             $("#mostrar-resultado").show();
         } 
-    });
+    });*/
     
 });
+
+    

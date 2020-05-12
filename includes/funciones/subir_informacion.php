@@ -60,7 +60,7 @@
 
     function agregarSolicitud($nombre, $telefono, $correo, $plan){
        //buscar cliente
-       
+
         $resultado=buscarCliente($nombre, $telefono, $correo);
         
         agregarUsuario($nombre, $telefono, $correo, $resultado);

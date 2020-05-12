@@ -20,7 +20,7 @@
     ?>
     <h1>Solicitud de plan</h1>
     <?php include_once "includes/funciones/funciones.php";?>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']).'?razon_social='.$_GET["razon_social"].'&nombre_plan='.$_GET["nombre_plan"].''?>" method="POST" target="frame"><!--Este atributo especifica una ventana de navegador de destino-->
+        <form id ="formulario" method="POST" target="frame"><!--Este atributo especifica una ventana de navegador de destino-->
             
             <label id="nombre">*Nombre completo<input type="text" placeholder="Nombre y Apellido" name="nombre" id="nombre" onkeypress="return soloLetras(event)" required></label><br>
             <?php if(isset($_POST["submit"])){ validarNombre($nombre, $confirmarEnvio);}?>
@@ -43,8 +43,9 @@
     
         //Vamos a enviar la información a la base de datos
             if( $confirmarEnvio == 3 ){
-                include "includes/funciones/subir_informacion.php";
+                echo '<div id="envioConfirmado" style="display: none;"></div>';
                 
+                include "includes/funciones/subir_informacion.php";
                 agregarSolicitud($nombre, $telefono, $correo, $informacion_plan);
             }
     ?>
@@ -59,17 +60,7 @@
         <i class="fas fa-phone"></i>
     </div>
     <div class="resultado-informacion">
-        <h2 class="fw-300">Datos de Contacto</h3>
-        <ul class="detalle plan-seleccion" style="display: block;">
-        <?php 
-                    
-            $datosCliente=consultarSolicitud();
-        ?>
-            <li class="fw-bold">Nombre: <span class="fw-300"><?php echo $datosCliente["nombre"];?></span></li>
-            <li class="fw-bold">Teléfono celular: <span class="fw-300"><?php echo $datosCliente["telefono"];?></span></li>
-            <li class="fw-bold">Correo: <span class="fw-300"><?php echo $datosCliente["correo"];?></span></li>
-        </ul>
-        <p>Ahora nos contacteremos con la información otorgada para concretar el pedido señor <span class="fw-bold"><?php echo $datosCliente["nombre"];?></span>.</p>
+
     </div>
     <div class="resultado-plan">
         <h2 class="fw-300">Resumen Plan</h3>
