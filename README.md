@@ -10,7 +10,7 @@ _Navegador de smartphone o de computadora_
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Para la presentación del documento.
 * [HTML](https://rometools.github.io/rome/) - Para la elaboración de páginas web.
 
-**(Front-End)***
+**(Back-End)***
 * [PHP](https://www.php.net/) - Para realizar la programación desde el lado servidor, valdiaciónes y consulta a MySql.
 * [MySql](https://www.mysql.com/) - Sistema gestor de base de datos relacional usado para los planes de televisión y los clientes.
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Paquete de software utilizado, en donde se encuentra el servidor Apache.
@@ -20,4 +20,4 @@ _Navegador de smartphone o de computadora_
 * [Clever Cloud](https://www.clever-cloud.com/en/mysql-hosting) - Hosting en donde se encuetra la base de datos Mysql.
 
 ## ❤️❤️❤️ Sitio Web (_Haga click a la imagen_) ❤️❤️❤️
-[![Sitio web](img/Muestra-Web.png)](https://andrescoxrocha.azurewebsites.net/)
+[![Sitio web](Planes de internet.png)](https://andrescoxrocha.azurewebsites.net/)
