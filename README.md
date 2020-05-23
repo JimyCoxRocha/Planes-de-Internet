@@ -23,4 +23,4 @@ _Navegador de smartphone o de computadora_
 * [Crisp](https://crisp.chat/es/) - Sistema de mensajería utilizado
 
 ## ❤️❤️❤️ Sitio Web (_Haga click a la imagen_) ❤️❤️❤️
-[![Sitio web](/Planes-de-internet.png)](https://andrescoxrocha.azurewebsites.net/)
+[![Sitio web](https://raw.githubusercontent.com/JimyCoxRocha/Planes-de-Internet/master/Planes%20de%20internet.png)](https://andrescoxrocha.azurewebsites.net/)
